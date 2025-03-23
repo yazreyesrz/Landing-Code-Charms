@@ -1,0 +1,371 @@
+:root {
+  --rosa: #f7809e;
+  --azul: #53befc;
+  --amarillo: #f5c54d;
+  --vainilla: #ffe79e;
+  --celeste: #c9f2ff;
+  --verde-claro: #e9ffe6;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --fuente-principal: "Montserrat", sans-serif;
+  --fuente-divertida: "Lexend", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--celeste);
+  font-family: var(--fuente-principal);
+  color: var(--negro);
+  line-height: 1.6;
+}
+
+/* HEADER */
+.main-header {
+  background-color: var(--amarillo);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 80px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--rosa);
+  font-weight: 600;
+  font-family: var(--fuente-divertida);
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--azul);
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-texto h1 {
+  font-size: 2.5rem;
+  font-family: var(--fuente-divertida);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-texto h1 .rosa {
+  color: var(--rosa);
+}
+
+.hero-texto h1 .azul {
+  color: var(--azul);
+}
+
+.hero-texto p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* BOTONES */
+.boton-rosa,
+.boton-azul {
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.boton-rosa {
+  background-color: var(--rosa);
+  color: white;
+}
+
+.boton-rosa:hover {
+  background-color: #e96689;
+  transform: translateY(-2px);
+}
+
+.boton-azul {
+  background-color: var(--azul);
+  color: white;
+}
+
+.boton-azul:hover {
+  background-color: #42a4e3;
+  transform: translateY(-2px);
+}
+
+/* DESCRIPCIÓN */
+.descripcion {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.descripcion h2 {
+  font-family: var(--fuente-divertida);
+  font-size: 2rem;
+  color: var(--rosa);
+  margin-bottom: 1rem;
+}
+
+.descripcion p {
+  font-size: 1.1rem;
+}
+
+/* VENTAJAS */
+.ventajas {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.ventajas h2 {
+  font-size: 2rem;
+  font-family: var(--fuente-divertida);
+  margin-bottom: 2rem;
+  color: var(--azul);
+}
+
+.ventaja-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ventaja-cards .card {
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  width: 280px;
+}
+
+.card h3 {
+  margin-bottom: 0.8rem;
+  color: var(--rosa);
+  font-size: 1.2rem;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+/* VIDEOS */
+.videos {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.videos h2 {
+  font-family: var(--fuente-divertida);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--amarillo);
+}
+
+.video-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.video-container video,
+.video-container iframe {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* PRECIOS */
+.precios {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.precios h2 {
+  font-family: var(--fuente-divertida);
+  font-size: 2rem;
+  color: var(--rosa);
+  margin-bottom: 2rem;
+}
+
+.paquetes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.paquete {
+  background-color: var(--blanco);
+  padding: 2rem;
+  width: 260px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.paquete:hover {
+  transform: translateY(-5px);
+}
+
+.paquete h3 {
+  font-size: 1.3rem;
+  color: var(--azul);
+  margin-bottom: 0.5rem;
+}
+
+.paquete p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.paquete ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.paquete ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* NOSOTROS */
+.nosotros {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.nosotros h2 {
+  font-family: var(--fuente-divertida);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--azul);
+}
+
+.contenido-nosotros {
+  max-width: 900px;
+  margin: auto;
+}
+
+.contenido-nosotros p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contenido-nosotros img {
+  width: 260px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* CONTACTO */
+.contacto {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--vainilla);
+  border-radius: 40px;
+  margin: 3rem auto;
+  max-width: 1000px;
+}
+
+.contacto h2 {
+  font-family: var(--fuente-divertida);
+  font-size: 2rem;
+  color: var(--rosa);
+  margin-bottom: 1rem;
+}
+
+.contacto p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--negro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ACTUALIZA el logo para hacerlo más grande y con sombra */
+.logo img {
+  height: 120px;
+  filter: none;
+}
+
+/* AGREGA sombra debajo del navbar para hacerlo más visible */
+.main-header {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* BOTONES de navegación estilo pill con borde y sombra */
+nav a {
+  text-decoration: none;
+  color: var(--rosa);
+  font-weight: 600;
+  font-family: var(--fuente-divertida);
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  border: 2px solid var(--rosa);
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+nav a:hover {
+  background-color: var(--rosa);
+  color: var(--blanco);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
