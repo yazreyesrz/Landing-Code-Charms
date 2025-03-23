@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Charms</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@500&family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -22,7 +23,7 @@
           <li><a href="#ventajas">Beneficios</a></li>
           <li><a href="#videos">Videos</a></li>
           <li><a href="#precios">Precios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <!-- <li><a href="#contacto">Contacto</a></li> -->
         </ul>
       </nav>
     </header>
@@ -41,7 +42,7 @@
         <a href="#ventajas" class="boton-rosa">Explorar Personajes</a>
       </div>
       <div class="hero-img">
-        <img src="assets/hero-illustration.jpg" alt="Ilustración principal" />
+        <img src="assets/hero-illustration.png" alt="Ilustración principal" />
       </div>
     </section>
 
@@ -52,6 +53,27 @@
         Somos una empresa creativa que diseña animaciones encantadoras para
         proyectos digitales y extensiones.
       </p>
+    </section>
+
+    <!-- Carrusel -->
+    <section class="carrusel" id="carrusel">
+      <h2>Personajes</h2>
+      <div class="carrusel-slider">
+        <button class="flecha izquierda" onclick="moverCarrusel(-1)">
+          &#10094;
+        </button>
+        <div class="slide-track" id="carruselTrack">
+          <img src="assets/pajaro.png" alt="Galería 1" />
+          <img src="assets/medusa.png" alt="Galería 2" />
+          <img src="assets/morsa.png" alt="Galería 3" />
+          <img src="assets/serpiente.png" alt="Galería 4" />
+          <img src="assets/koala.png" alt="Galería 5" />
+          <img src="assets/Tortuga.png" alt="Galería 6" />
+        </div>
+        <button class="flecha derecha" onclick="moverCarrusel(1)">
+          &#10095;
+        </button>
+      </div>
     </section>
 
     <!-- VENTAJAS Y BENEFICIOS -->
@@ -79,7 +101,7 @@
 
     <!-- VIDEOS PROMOCIONALES -->
     <section class="videos" id="videos">
-      <h2>Videos Promocionales</h2>
+      <h2>Videos Informativos</h2>
       <div class="video-container">
         <video src="assets/video-demo.mp4" controls></video>
         <!-- O usa un iframe de YouTube si prefieres -->
@@ -95,29 +117,28 @@
           <h3>Individual</h3>
           <p>$15 MXN</p>
           <ul>
-            <li>1 personaje</li>
-            <li>Con animaciones</li>
+            <li>- 1 personaje</li>
+            <li>- Incluye animaciones</li>
           </ul>
         </div>
         <div class="paquete destacado">
           <h3>Set</h3>
           <p>$70 MXN</p>
           <ul>
-            <li>5 personajes</li>
+            <li>- 5 personajes</li>
             <li>
-              Se da de regalo una animacion que no se puede comprar
-              individualmente
+              - Se regala una animacion que no se puede comprar individualmente
             </li>
-            <li>Con animaciones</li>
+            <li>- Incluye animaciones</li>
           </ul>
         </div>
         <div class="paquete">
           <h3>Personalizado</h3>
           <p>(El precio suele variar)</p>
           <ul>
-            <li>Todo ilimitado</li>
-            <li>Diseño personalizado</li>
-            <li>Soporte 24/7</li>
+            <li>- Todo ilimitado</li>
+            <li>- Diseño personalizado</li>
+            <li>- Soporte 24/7</li>
           </ul>
         </div>
       </div>
@@ -126,28 +147,71 @@
     <!-- NOSOTROS -->
     <section class="nosotros" id="nosotros">
       <div class="contenido-nosotros">
-        <h2>Sobre Nosotros</h2>
-        <p>
-          Somos un pequeño equipo apasionado por el diseño tierno, el arte
-          digital y el desarrollo. Nos encanta crear personajes que acompañen a
-          los usuarios mientras programan, estudian o crean.
-        </p>
-        <img src="assets/team-photo.jpg" alt="Equipo Code Charms" />
+        <div class="nosotros-imagen">
+          <img src="assets/team-photo.jpg" alt="Equipo Code Charms" />
+        </div>
+        <div class="nosotros-texto">
+          <h2>Sobre Nosotros</h2>
+          <p>
+            Somos un pequeño equipo apasionado por el diseño tierno, el arte
+            digital y el desarrollo. Nos encanta crear personajes que acompañen
+            a los usuarios mientras programan, estudian o crean.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- CONTACTO -->
-    <section class="contacto" id="contacto">
+    <!-- <section class="contacto" id="contacto">
       <h2>Conecta con nosotros</h2>
       <p>
         ¿Te gustaría colaborar o tener un personaje personalizado? ¡Hablemos!
       </p>
       <a href="mailto:code.charms@outlook.com" class="boton-azul">Escríbenos</a>
-    </section>
+    </section> -->
 
     <!-- FOOTER -->
     <footer class="footer">
-      <p>&copy; 2025 Code Charms. Todos los derechos reservados.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Code Charms</h4>
+          <ul>
+            <li><a href="#nosotros">¿Quiénes somos?</a></li>
+            <li><a href="#ventajas">Beneficios</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#precios">Precios</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Redes Sociales</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">X (Twitter)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="mailto:code.charms@outlook.com">Contáctanos</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Extras</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Colaboraciones</a></li>
+            <li><a href="#">Afiliados</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Code Charms. Todos los derechos reservados.</p>
+      </div>
     </footer>
   </body>
 </html>
