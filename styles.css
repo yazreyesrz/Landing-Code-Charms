@@ -15,35 +15,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
-  background-color: var(
-    --blanco
-  ); /* Cambiado de var(--celeste) a var(--blanco) */
+  padding-top: 80px; /* Compensar altura del header */
+  background-color: var(--blanco);
   font-family: var(--fuente-principal);
   color: var(--negro);
   line-height: 1.6;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
-/* HEADER */
+/* HEADER - Fijo y mejorado */
 .main-header {
-  background-color: var(--vainilla);
+  background: linear-gradient(135deg, #ffffff 0%, #ffe79e 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  position: sticky;
+  padding: 0.5rem 3rem;
+  position: fixed;
   top: 0;
-  z-index: 100;
-  transition: all 0.3s ease;
-  height: 72px;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Aumentar z-index para mayor seguridad */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 80px;
+  width: 100%; /* Asegurar ancho completo */
+  margin: 0 auto; /* Centrar en pantallas grandes */
 }
 
 .logo img {
-  height: 56px;
+  height: 120px;
   transition: transform 0.3s ease;
+  filter: none;
 }
 
 .logo img:hover {
@@ -53,28 +59,44 @@ body {
 nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 nav a {
-  font-size: 0.9rem;
-  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  color: var(--rosa);
+  font-weight: 600;
+  font-family: var(--fuente-divertida);
+  border-radius: 25px;
+  border: 2px solid rgba(247, 128, 158, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 nav a:hover {
-  color: var(--azul);
+  background-color: var(--rosa);
+  color: var(--blanco);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(247, 128, 158, 0.3);
 }
 
 /* HERO */
 .hero {
+  padding-top: 0; /* Ya se compensa desde el body */
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   gap: 2rem;
   max-width: 1200px;
   margin: auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-texto {
@@ -83,10 +105,13 @@ nav a:hover {
 }
 
 .hero-texto h1 {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   font-family: var(--fuente-divertida);
   font-weight: 700;
-  margin-bottom: 1rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-texto h1 .rosa {
@@ -110,11 +135,33 @@ nav a:hover {
 
 .hero-img img {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   background-color: var(--celeste);
   padding: 1rem;
+  transition: transform 0.3s ease;
+  border: 3px solid var(--rosa);
+}
+
+.hero-img:hover img {
+  transform: rotate(2deg) scale(1.02);
+}
+
+/* Efecto de burbujas decorativas */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(83, 190, 252, 0.1) 0%,
+    rgba(255, 231, 158, 0) 70%
+  );
+  top: -200px;
+  right: -200px;
+  z-index: 1;
 }
 
 /* BOTONES */
@@ -194,6 +241,29 @@ nav a:hover {
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   width: 280px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #fff 0%, #fff9ed 100%);
+  border: 2px solid var(--rosa);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(247, 128, 158, 0.1) 0%,
+    transparent 70%
+  );
+  transition: all 0.5s ease;
+}
+
+.card:hover::before {
+  transform: translate(50%, 50%);
 }
 
 .card h3 {
@@ -258,10 +328,19 @@ nav a:hover {
   border-radius: 20px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+  position: relative;
+  background: var(--blanco);
+  border: 2px solid var(--azul);
 }
 
 .paquete:hover {
   transform: translateY(-5px);
+}
+
+.paquete.destacado {
+  border: 3px solid var(--rosa);
+  transform: scale(1.05);
+  z-index: 1;
 }
 
 .paquete h3 {
@@ -284,6 +363,12 @@ nav a:hover {
 
 .paquete ul li {
   margin-bottom: 0.5rem;
+}
+
+.paquete ul li::before {
+  content: "✓";
+  color: var(--rosa);
+  margin-right: 0.5rem;
 }
 
 /* NOSOTROS */
@@ -352,12 +437,13 @@ nav a:hover {
 
 /* FOOTER */
 .footer {
-  background-color: #fef6e5;
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe79e 100%);
   padding: 4rem 2rem 2rem;
   font-size: 0.95rem;
   font-family: var(--fuente-principal);
   color: var(--negro);
   margin-top: 4rem;
+  border-top: 3px solid var(--rosa);
 }
 
 .footer-grid {
@@ -375,6 +461,18 @@ nav a:hover {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: var(--rosa);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--azul);
 }
 
 .footer-col ul {
@@ -451,6 +549,7 @@ nav a:hover {
   max-width: 1000px;
   margin: auto;
   position: relative;
+  padding: 2rem 0;
 }
 
 .slide-track {
@@ -462,13 +561,41 @@ nav a:hover {
 }
 
 .slide-track img {
-  width: 280px;
+  width: 320px;
   height: auto;
   border-radius: 20px;
   flex-shrink: 0;
   background-color: var(--celeste);
   padding: 1rem;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 2px solid var(--rosa);
+}
+
+.slide-track img:hover {
+  transform: scale(1.05);
+}
+
+/* Degradado en los bordes del carrusel */
+.carrusel-slider::before,
+.carrusel-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carrusel-slider::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--blanco) 20%, transparent);
+}
+
+.carrusel-slider::after {
+  right: 0;
+  background: linear-gradient(-90deg, var(--blanco) 20%, transparent);
 }
 
 /* Flechitas corregidas y posicionadas */
@@ -503,4 +630,14 @@ nav a:hover {
 
 .flecha.derecha {
   right: 0;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.03em;
+}
+
+.shadow-soft {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
 }
