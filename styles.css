@@ -30,20 +30,36 @@ body {
 
 /* HEADER - Fijo y mejorado */
 .main-header {
+<<<<<<< HEAD
   background-color: #87bada; /* azul sólido */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3rem 4rem;
+=======
+  background: linear-gradient(135deg, #ffffff 0%, #ffe79e 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 3rem;
+>>>>>>> f2fe092afabbcbe3ca4c1272d6a765ed1bd5ac8b
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+<<<<<<< HEAD
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   height: 80px;
   width: 100%;
   margin: 0 auto;
+=======
+  z-index: 1000; /* Aumentar z-index para mayor seguridad */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 80px;
+  width: 100%; /* Asegurar ancho completo */
+  margin: 0 auto; /* Centrar en pantallas grandes */
+>>>>>>> f2fe092afabbcbe3ca4c1272d6a765ed1bd5ac8b
 }
 
 .logo img {
@@ -437,7 +453,11 @@ nav a:hover {
 
 /* FOOTER */
 .footer {
+<<<<<<< HEAD
   background-color: #87bada; /* mismo azul que el header */
+=======
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe79e 100%);
+>>>>>>> f2fe092afabbcbe3ca4c1272d6a765ed1bd5ac8b
   padding: 4rem 2rem 2rem;
   font-size: 0.95rem;
   font-family: var(--fuente-principal);
@@ -453,7 +473,11 @@ nav a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 2rem;
+<<<<<<< HEAD
   border-bottom: 2px solid #e96689;
+=======
+  border-bottom: 2px solid #ffe2b0;
+>>>>>>> f2fe092afabbcbe3ca4c1272d6a765ed1bd5ac8b
 }
 
 .footer-col h4 {
@@ -498,7 +522,11 @@ nav a:hover {
   text-align: center;
   padding-top: 2rem;
   font-size: 0.85rem;
+<<<<<<< HEAD
   color: #474545;
+=======
+  color: #777;
+>>>>>>> f2fe092afabbcbe3ca4c1272d6a765ed1bd5ac8b
 }
 
 /* ACTUALIZA el logo para hacerlo más grande y con sombra */
