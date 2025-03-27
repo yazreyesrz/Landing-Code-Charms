@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Charms</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@500&family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -23,31 +23,36 @@
           <li><a href="#ventajas">Beneficios</a></li>
           <li><a href="#videos">Videos</a></li>
           <li><a href="#precios">Precios</a></li>
-          <!-- <li><a href="#contacto">Contacto</a></li> -->
         </ul>
       </nav>
     </header>
 
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-texto">
-        <h1>
-          Donde la <span class="rosa">magia</span> y el
-          <span class="azul">código</span> se encuentran
-        </h1>
-        <p>
-          Creemos personajes adorables, encantadores y listos para usarse en tus
-          proyectos digitales.
-        </p>
-        <a href="#ventajas" class="boton-rosa">Explorar Personajes</a>
-      </div>
-      <div class="hero-img">
-        <img src="assets/hero-illustration.png" alt="Ilustración principal" />
+      <div class="hero-content fade-in">
+        <div class="hero-texto">
+          <h1>
+            Donde la <span class="rosa">magia</span> y el
+            <span class="azul">código</span> se encuentran
+          </h1>
+          <p>
+            Creemos personajes adorables, encantadores y listos para usarse en
+            tus proyectos digitales.
+          </p>
+          <a href="#ventajas" class="boton-rosa">Explorar Personajes</a>
+        </div>
+        <div class="hero-img">
+          <img
+            src="assets/hero-illustration.png"
+            alt="Ilustración principal"
+            class="float-bounce"
+          />
+        </div>
       </div>
     </section>
 
     <!-- DESCRIPCIÓN -->
-    <section class="descripcion">
+    <section class="descripcion fade-in">
       <h2>¿Qué es Code Charms?</h2>
       <p>
         Somos una empresa creativa que diseña animaciones encantadoras para
@@ -56,10 +61,11 @@
     </section>
 
     <!-- Carrusel -->
-    <section class="carrusel" id="carrusel">
+    <section class="carrusel fade-in" id="carrusel">
       <h2>Personajes</h2>
       <div class="carrusel-slider">
-        <button class="flecha izquierda" onclick="moverCarrusel(-1)">
+        <!-- <button class="flecha izquierda" onclick="moverCarrusel(-1)"> -->
+        <!-- <button class="flecha derecha" onclick="moverCarrusel(1)"> -->
           &#10094;
         </button>
         <div class="slide-track" id="carruselTrack">
@@ -70,14 +76,15 @@
           <img src="assets/koala.png" alt="Galería 5" />
           <img src="assets/Tortuga.png" alt="Galería 6" />
         </div>
-        <button class="flecha derecha" onclick="moverCarrusel(1)">
+        <!-- <button class="flecha derecha" onclick="moverCarrusel(1)">
           &#10095;
-        </button>
+        </button> "> -->
+          &#10094;
       </div>
     </section>
 
     <!-- VENTAJAS Y BENEFICIOS -->
-    <section class="ventajas" id="ventajas">
+    <section class="ventajas fade-in" id="ventajas">
       <h2>Ventajas y Beneficios</h2>
       <div class="ventaja-cards">
         <div class="card">
@@ -100,7 +107,7 @@
     </section>
 
     <!-- VIDEOS PROMOCIONALES -->
-    <section class="videos" id="videos">
+    <section class="videos fade-in" id="videos">
       <h2>Videos Informativos</h2>
       <div class="video-container">
         <video src="assets/CodeCharms.mp4" controls></video>
@@ -109,7 +116,7 @@
     </section>
 
     <!-- PRECIOS -->
-    <section class="precios" id="precios">
+    <section class="precios fade-in" id="precios">
       <h2>Paquetes</h2>
       <div class="paquetes">
         <div class="paquete">
@@ -143,8 +150,59 @@
       </div>
     </section>
 
-    <!-- NOSOTROS -->
-    <section class="nosotros" id="nosotros">
+    <section class="caracteristicas-avanzadas fade-in">
+      <h2>Características Avanzadas</h2>
+      <div class="grid-caracteristicas">
+        <div class="card-caracteristica">
+          <h3>Personalización</h3>
+          <ul>
+            <li>🎨 Cambio de Colores</li>
+            <li>🌈 Estilos Únicos</li>
+            <li>✨ Animaciones Personalizadas</li>
+          </ul>
+        </div>
+        <div class="card-caracteristica">
+          <h3>Tipos de Personajes</h3>
+          <ul>
+            <li>💗 Cute</li>
+            <li>🎮 Gaming</li>
+            <li>👾 Animados</li>
+          </ul>
+        </div>
+        <!-- 
+        <div class="card-caracteristica">
+          <h3>Formatos de Exportación</h3>
+          <ul>
+            <li>SVG Animado</li>
+            <li>PNG Transparente</li>
+            <li>Figma & Sketch</li>
+          </ul>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <section class="testimonios fade-in">
+      <h2>Lo Que Dicen Nuestros Clientes</h2>
+      <div class="testimonios-grid">
+        <div class="testimonio">
+          <p>
+            "Code Charms transformó completamente la estética de nuestra
+            aplicación."
+          </p>
+          <strong>- María G., Fundadora de StartupTech</strong>
+        </div>
+        <div class="testimonio">
+          <p>
+            "Nunca imaginé que los personajes pudieran hacer mi documentación
+            tan divertida de leer."
+          </p>
+          <strong>- Carlos R., Desarrollador Senior</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="nosotros fade-in" id="nosotros">
       <div class="contenido-nosotros">
         <div class="nosotros-imagen">
           <img src="assets/team-photo.jpg" alt="Equipo Code Charms" />
@@ -160,16 +218,6 @@
       </div>
     </section>
 
-    <!-- CONTACTO -->
-    <!-- <section class="contacto" id="contacto">
-      <h2>Conecta con nosotros</h2>
-      <p>
-        ¿Te gustaría colaborar o tener un personaje personalizado? ¡Hablemos!
-      </p>
-      <a href="mailto:code.charms@outlook.com" class="boton-azul">Escríbenos</a>
-    </section> -->
-
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-grid">
         <div class="footer-col">
@@ -184,11 +232,29 @@
         <div class="footer-col">
           <h4>Redes Sociales</h4>
           <ul>
-            <li><a href="https://www.instagram.com/code.charms/?hl=es" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://www.tiktok.com/@code.charms?_t=ZM-8v1DE1boTwN&_r=1" target="_blank" rel="noopener noreferrer">TikTok</a></li>
-            <li><a href="https://www.facebook.com/share/16KAP9nThQ/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li>
+              <a
+                href="https://www.instagram.com/code.charms/?hl=es"
+                target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@code.charms?_t=ZM-8v1DE1boTwN&_r=1"
+                target="_blank"
+                >TikTok</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/share/16KAP9nThQ/"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
           </ul>
-        </div>        
+        </div>
         <div class="footer-col">
           <h4>Soporte</h4>
           <ul>
