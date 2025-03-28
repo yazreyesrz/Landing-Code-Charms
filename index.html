@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@500&family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- HEADER -->
@@ -39,7 +43,7 @@
             Creemos personajes adorables, encantadores y listos para usarse en
             tus proyectos digitales.
           </p>
-          <a href="#ventajas" class="boton-rosa">Explorar Personajes</a>
+          <a href="#carrusel" class="boton-rosa">Explorar Personajes</a>
         </div>
         <div class="hero-img">
           <img
@@ -60,26 +64,76 @@
       </p>
     </section>
 
-    <!-- Carrusel -->
     <section class="carrusel fade-in" id="carrusel">
       <h2>Personajes</h2>
       <div class="carrusel-slider">
-        <!-- <button class="flecha izquierda" onclick="moverCarrusel(-1)"> -->
-        <!-- <button class="flecha derecha" onclick="moverCarrusel(1)"> -->
-          &#10094;
-        </button>
         <div class="slide-track" id="carruselTrack">
-          <img src="assets/pajaro.png" alt="Galería 1" />
-          <img src="assets/medusa.png" alt="Galería 2" />
-          <img src="assets/morsa.png" alt="Galería 3" />
-          <img src="assets/serpiente.png" alt="Galería 4" />
-          <img src="assets/koala.png" alt="Galería 5" />
-          <img src="assets/Tortuga.png" alt="Galería 6" />
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="assets/pajaro.png" alt="Pájaro" />
+              </div>
+              <div class="flip-back back-pajaro">
+                <span>Nina</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="assets/medusa.png" alt="Medusa" />
+              </div>
+              <div class="flip-back back-medusa">
+                <span>Jelly</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="assets/morsa.png" alt="Morsa" />
+              </div>
+              <div class="flip-back back-morsa">
+                <span>Tuskie</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="assets/serpiente.png" alt="Serpiente" />
+              </div>
+              <div class="flip-back back-serpiente">
+                <span>Slithy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="assets/koala.png" alt="Koala" />
+              </div>
+              <div class="flip-back back-koala">
+                <span>Koko</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="assets/tortuga.png" alt="Tortuga" />
+              </div>
+              <div class="flip-back back-tortuga">
+                <span>Capu</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- <button class="flecha derecha" onclick="moverCarrusel(1)">
-          &#10095;
-        </button> "> -->
-          &#10094;
       </div>
     </section>
 
@@ -194,8 +248,8 @@
         </div>
         <div class="testimonio">
           <p>
-            "Nunca imaginé que los personajes pudieran hacer mi código
-            tan divertido de leer."
+            "Nunca imaginé que los personajes pudieran hacer mi código tan
+            divertido de leer."
           </p>
           <strong>- Eddie Toledo., Desarrollador Junior</strong>
         </div>
